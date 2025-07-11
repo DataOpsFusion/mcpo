@@ -1,0 +1,80 @@
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "time": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-time",
+        "--local-timezone=America/Toronto"
+      ]
+    },
+    "calculator": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-calculator"
+      ]
+    },
+    "airbnb": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@openbnb/mcp-server-airbnb",
+        "--ignore-robots-txt"
+      ]
+    },
+    "json": {
+      "command": "npx",
+      "args": [
+        "@gongrzhe/server-json-mcp@1.0.3"
+      ]
+    },
+    "mongodb-env": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-mongo-server"
+      ],
+      "env": {
+        "MCP_MONGODB_URI": "mongodb://user:password@127.0.0.1:27017/admin?authSource=admin",
+        "MCP_MONGODB_READONLY": "true"
+      }
+    },
+    "nasa-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@programcomputer/nasa-mcp-server@latest"
+      ],
+      "env": {
+        "NASA_API_KEY": "<YOUR_NASA_API_KEY>"
+      }
+    },
+    "n8n-local": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@leonardsellem/n8n-mcp-server",
+        "--openapi"
+      ],
+      "env": {
+        "N8N_API_URL": "http://127.0.0.1:5678/api/v1",
+        "N8N_API_KEY": "<YOUR_N8N_API_KEY>"
+      },
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
